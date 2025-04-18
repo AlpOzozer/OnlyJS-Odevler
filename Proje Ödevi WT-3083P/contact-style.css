@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+.section-p {
+    color: #6c6f76;
+}
+
+#footer-div-1 {
+    background-color: black;
+    color: white;
+    padding: 1.5rem;
+    font-size: small;
+}
+
+.footer-item {
+    color: white;
+}
+
+#section {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}

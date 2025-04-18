@@ -4,6 +4,7 @@
 
 #header {
     padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 #header-p-1 {
@@ -12,3 +13,27 @@
     padding-bottom: 5px;
 }
 
+
+
+#section-3 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.img-our-team {
+    margin-bottom: 2rem;
+    
+}
+
+#footer-div-1 {
+    background-color: black;
+    color: white;
+    padding: 1.5rem;
+    font-size: small;
+}
+
+
+
+.footer-item {
+    color: white;
+}
