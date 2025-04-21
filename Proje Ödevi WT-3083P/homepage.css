@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+}
+
+#nav {
+    background-color: green;
+    color: white;
+}
+
+.nav-text {
+    color: white;
+}
+
+#header-1 {
+    background-color: lightgreen;
+    padding: 5.5rem;
+}
+
+#header-1-h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: 4rem;
+}
+
+
+
+#header-1-p {
+     color: #7b8489;
+     font-size: 1.3rem;
+}
+
+a.header-1-button {
+    padding: 9px;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin: 10px;
+    font-size: 1.2rem;
+    font-weight: 1.4rem;
+}
+
+#section-1 {
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+    margin-right: 13rem;
+}
+
+#section-1-h2 {
+    text-align: end;
+    padding-right: 6rem;
+}
+
+.section-1-featured-title {
+    font-size: 1.3rem;
+    padding-top: 1.5rem;
+}
+
+#div-1 {
+    background-color: #f8f9fb;
+}
+
+ 
+#div-1-h4 {
+    font-weight: 400;
+}
+
+#div-1-2 {
+    margin-top: 2rem;
+}
+
+#div-2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-1 {
+    height:400px;
+    width: 376px; 
+}
+
+.card-img-top {
+    height: 300px;
+    object-fit: contain;
+    padding:3rem;
+}
+
+.card-bottom-text {
+    padding-bottom: 1.2rem;
+    padding-left: 1.3rem;
+}
+
+#sign-up-h3 {
+    color: white;
+}
+
+#sign-up-p {
+    color: #7fb3ff;
+}
+
+#footer-div-1 {
+    background-color: lightgreen;
+    color: white;
+    padding: 1.5rem;
+}
+
+#aside {
+    padding: 5.2rem;
+}
+
+.footer-item {
+    color: white;
+}
+
+#like-icon {
+    font-size: 2.5rem;
+    color: rgb(225, 225, 0);
+    padding-bottom: 1.5rem;
+}
+
