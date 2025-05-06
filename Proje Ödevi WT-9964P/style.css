@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    
+}
+
+html {
+    background-color: #f8f9fa;
+}
+
+#nav {
+    background-color: white;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    flex-wrap: inherit;
+}
+
+
+
+#nav-button { 
+    border-radius: 2rem;
+}
+
+#nav-send-feedback {
+    margin-left: 2px;
+}
+
+.masthead { 
+    background-color: #f8f9fa;
+}
+
+#masthead-div {
+    margin-top: 12.5rem;
+    margin-bottom: 9.5rem;
+}
+
+.app-badge {
+    margin: 2rem;
+}
+
+#header-h1 {
+    font-size: 4.5rem;
+    font-weight: 2.2;
+}
+
+#header-p {
+    color: #717c7d;
+    font-size: 1.2rem;
+}
+
+#aside {
+    background: linear-gradient(45deg, #2937f0, #9f1ae2);
+    color: white;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+#aside-container {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+#aside-h2 {
+    font-size: 2.5rem;
+    padding-bottom: 1.5rem;
+}
+
+
