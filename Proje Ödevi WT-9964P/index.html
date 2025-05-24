@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Instagram</title>
+    <link rel="shortcut icon" href="img/instagram-phone.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
@@ -24,23 +25,23 @@
   <body id="body">
     <nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiary">
    <div class="container-fluid">
-    <a class="navbar-brand" href="#"><b>Start Bootstrap</b></a>
+    <a class="navbar-brand" href="#"><b>İnstagram</b></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Features</a>
+          <a class="nav-link active" aria-current="page" href="#features">Özellikler</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Download</a>
+          <a class="nav-link active" href="#download">İndir</a>
         </li>
         <li class="nav-item">
-          <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+          <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <span class="d-flex align-items-center">
                         <i class="bi-chat-text-fill me-2"></i>
-                        <span class="small">Send Feedback</span>
+                        <span class="small">Geribildirim</span>
                     </span>
           </button>
         </li>
@@ -55,13 +56,10 @@
           <div class="col">
             <div>
               <h1 id="header-h1">
-                Showcase your<br />
-                app beautifully.
+                Paylaş, Beğen <br> ve İzle
               </h1>
               <p id="header-p">
-                Launch your mobile app landing page faster with this free,
-                open<br />
-                source theme from Start Bootstrap!
+                İnstagram ile resim ve video paylaş. <br> Arkadaşlarının paylaşımlarını beğen
               </p>
               <div>
                 <a href="#!">
@@ -86,16 +84,16 @@
             </div>
           </div>
           <div id="header-div-1">
-             <div id="phone-1-div" class="col">
+             <div id="phone-1-div" class="col col-sm-6">
             <img
               id="phone-1"
               class="img-fluid"
-              src="img/phone-screen.png"
+              src="img/instagram-phone.png"
               width="272px"
               height="541px"
             />
           </div>
-            <div id="circle-1-div" class="col">
+            <div id="circle-1-div" class="col col-sm-6">
              <svg class="circle-top" viewBox="0 0 100 100">
               <circle id="features-circle" cx="50" cy="50" r="50"></circle>
              </svg>
@@ -111,12 +109,9 @@
           <div id="aside-container" class="col">
             <div>
               <h2 id="aside-h2">
-                "An intuitive solution to a common<br />
-                problem that we all face, wrapped up in a<br />
-                single app!"
+                Arakadaşlarınızı Takip Edebileceğiniz Bir Platform
               </h2>
             </div>
-            <img src="img/tnw-logo.svg" alt="..." style="height: 3rem" />
           </div>
         </div>
       </div>
@@ -130,7 +125,7 @@
                 <img
                   id="phone-2"
                   class="img-fluid section-1-img"
-                  src="img/phone-screen.png"
+                  src="img/instagram-phone.png"
                   width="272px"
                   height="541px"
                 />
@@ -150,11 +145,7 @@
                     <div class="section-1-icons">
                       <i class="bi bi-phone"></i>
                     </div>
-                    <h3>Device Mockups</h3>
-                    <p>
-                      Ready to use HTML/CSS device mockups, no Photoshop
-                      required!
-                    </p>
+                    <h3>Ek bir uygulama olmadan kullanın</h3>
                   </div>
                 </div>
                 <div class="col">
@@ -162,10 +153,9 @@
                     <div class="section-1-icons">
                       <i class="bi bi-camera"></i>
                     </div>
-                    <h3>Flexible Use</h3>
+                    <h3>Eğlenceli Kullanım</h3>
                     <p>
-                      Put an image, video, animation, or anything else in the
-                      screen!
+                      Resim, video veya metin ekleyin
                     </p>
                   </div>
                 </div>
@@ -176,10 +166,9 @@
                     <div class="section-1-icons">
                       <i class="bi bi-gift"></i>
                     </div>
-                    <h3>Free to Use</h3>
+                    <h3>Bedava</h3>
                     <p>
-                      As always, this theme is free to download and use for any
-                      purpose!
+                      İnstagram'ı ücretsiz indirin
                     </p>
                   </div>
                 </div>
@@ -188,11 +177,7 @@
                     <div class="section-1-icons">
                       <i class="bi bi-patch-check"></i>
                     </div>
-                    <h3>Open Source</h3>
-                    <p>
-                      Since this theme is MIT licensed, you can use it
-                      commercially!
-                    </p>
+                    <h3>İstediğiniz an paylaşım yapın</h3>
                   </div>
                 </div>
               </div>
@@ -209,21 +194,19 @@
         >
           <div class="col">
             <h2 id="section-2-h2">
-              Enter a new age of<br />
-              web design
+              Paylaşım Adına Yeni Bir Çağa Girin
             </h2>
             <p id="section-2-p">
-              This section is perfect for featuring some information<br />
-              about your application, why it was built, the problem it<br />
-              solves, or anything else! There's plenty of space for<br />
-              text here, so don't worry about writing too much.
+              İnstagram; paylaşım yapabilmeniz, beğeni yapabilmeniz ve arkadaşlarınız ile takipte kalabilmeniz için yapıldı. <br>
+              Fotoğraf ve video paylaşarak duygularınızı, düşüncelerinizi <br> ifade edebilir, birebir mesajlaşma ile arakadaşlarınız ile bağınızı 
+              daha iyi sürdürebilirsiniz.
             </p>
           </div>
           <div class="col">
             <div>
               <img
                 class="img-fluid rounded-circle"
-                src="img/image.png"
+                src="img/instagram-logosu.webp"
                 alt="..."
                 width="588"
                 height="588"
@@ -236,8 +219,8 @@
     <section class="cta">
       <div class="cta-content">
         <div class="container">
-          <h2 id="section-cta-h2">Stop waiting. <br />Start building.</h2>
-          <a class="btn btn-primary">Download for free</a>
+          <h2 id="section-cta-h2">Hadi, serüveninize<br> başlayın!</h2>
+          <a class="btn btn-primary">Ücretsiz Olarak İndirin</a>
         </div>
       </div>
     </section>
@@ -285,8 +268,8 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">
-              Send feedback
+            <h1 class="modal-title fs-5" id="exampleModal">
+              Geribildirimde Bulunun
             </h1>
             <button
               type="button"
@@ -304,7 +287,7 @@
                 type="text"
                 id="name"
                 name="name"
-                placeholder="Full name"
+                placeholder="Ad ve Soyad"
                 size="45"
                 style="height: 3.5rem"
               />
@@ -314,7 +297,7 @@
                 type="email"
                 id="email"
                 name="email"
-                placeholder="Email address"
+                placeholder="E-posta Adresi"
                 size="45"
                 style="height: 3.5rem"
               />
@@ -324,7 +307,7 @@
                 type="tel"
                 id="phone"
                 name="phone"
-                placeholder="Phone number"
+                placeholder="Telefon Numarası"
                 size="45"
                 style="height: 3.5rem"
               />
@@ -333,11 +316,11 @@
               <textarea
                 name="message"
                 id="message"
-                placeholder="Message"
+                placeholder="Mesaj"
                 style="height: 9rem; width: 25rem"
               ></textarea>
               <div class="modal-footer">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Kaydet</button>
               </div>
             </form>
           </div>
