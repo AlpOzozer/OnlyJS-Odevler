@@ -36,14 +36,41 @@
     border-color: v.$button-color;
     border-radius: v.$button-border-radius;
     height: 2.5rem;
-    width: 8rem;
+    width: 9rem;
 }
 
 #buy-now {
     color: white;
     background-color: v.$button-color;
-     border-color: v.$button-color;
+    border-color: v.$button-color;
     border-radius: v.$button-border-radius;
     height: 2.5rem;
     width: 22rem;
+}
+
+#credit-card-button {
+    color: v.$button-color;
+    background-color: white;
+    border-color: v.$button-color;
+    border-radius: v.$button-border-radius;
+    font-weight: 500;
+    height: 3rem;
+    width: 10.5rem;
+
+}
+
+#trading-tools-button {
+    color: v.$button-color;
+    background-color: white;
+    border-color: v.$button-color;
+    border-radius: v.$button-border-radius;
+    font-weight: 500;
+    height: 3rem;
+    width: 10.5rem;
+}
+
+@media (max-width: 992px) {
+    #trading-tools-button {
+        width: 20rem;
+    }
 }

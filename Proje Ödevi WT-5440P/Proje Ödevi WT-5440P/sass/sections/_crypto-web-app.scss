@@ -1,0 +1,63 @@
+@use '../abstracts/variables' as v;
+@use '../components/buttons';
+
+#crypto-web-app {
+    margin-top: 7rem;
+    display: flex;
+}
+
+#sign-up-today {
+    color: v.$button-color;
+    font-weight: 600;
+}
+
+#fastest-growing {
+    background: linear-gradient(to bottom, #10d2f7, 
+                    #1aacf8,); 
+            -webkit-text-fill-color: transparent; 
+            background-clip: text;
+            -webkit-background-clip: text; 
+    font-weight: 700;
+}
+
+#crypto-img {
+    padding-bottom: 10rem;
+}
+
+#download-app-select {
+    color: v.$button-color;
+}
+
+#crypto-web-app-p {
+    color: v.$p-color;
+}
+
+@media (min-width: 992px) {
+    #crypto-web-app-button-div {
+        display: flex;
+    }
+}
+
+@media (max-width: 992px) {
+    #crypto-web-app-p  {
+        display: none;
+    }
+
+    #crypto-img {
+        display: none;
+    }
+
+    #crypto-web-app {
+        justify-content: center;
+        text-align: center;
+    }
+
+    #get-started-button {
+        width: 15rem;
+    }
+
+    #download-app-button {
+        width: 15rem;
+        margin-top: 0.8rem;
+    }
+}

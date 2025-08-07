@@ -1,0 +1,30 @@
+@use '../abstracts/variables' as v;
+
+#header {
+    margin-left: 6rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+#nefa-img {
+    justify-content: flex-start;
+}
+
+#navbar {
+    margin-left: 3rem;
+    width: 10rem;
+    align-items: end;
+}
+
+#navbar-1 {
+    background-color: white;
+}
+
+a.nav-link {
+    color: black;
+}
+
+#nav-div {
+    display: flex;
+}
+
