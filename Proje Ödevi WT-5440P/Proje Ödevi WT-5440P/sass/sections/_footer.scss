@@ -1,0 +1,48 @@
+@use '../abstracts/variables' as v;
+
+
+.footer-hr-div {
+    border-left: 1px solid rgb(226, 226, 226);
+    padding-left: 3rem;
+}
+
+.footer-div {
+    padding: 3rem;
+}
+
+#footer-top-hr {
+    color: lightgray;
+}
+
+#footer-nefa {
+    padding-left: 7rem;
+    padding-top: 2rem;
+}
+
+#email-input {
+    height: 2.5rem;
+    width: 16rem;
+    border-color: lightgray;
+    border-radius: 6px;
+}
+
+#email-input::placeholder {
+    color: v.$p-color;
+}
+
+#footer-bottom-div {
+    text-align: center;
+    color: v.$p-color;
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 992px) {
+    #footer {
+        align-items: left;
+        text-align: left;
+    }
+}
+
+   
+
+

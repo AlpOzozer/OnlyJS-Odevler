@@ -69,6 +69,23 @@
     width: 10.5rem;
 }
 
+#back-to-top-button {
+    border-color: rgb(219, 219, 219);
+    color: rgb(96, 96, 96);
+    border-radius: 6px;
+    height: 2.2rem;
+    width: 8.2rem;
+    margin-top: 6rem;
+    margin-left: 3rem;
+}
+
+#footer-button {
+    color: white;
+    background-color: v.$button-color;
+    border-color: v.$button-color;
+    border-radius: 6px;
+}
+
 @media (max-width: 992px) {
     #trading-tools-button {
         width: 20rem;
