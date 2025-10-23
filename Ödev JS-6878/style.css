@@ -1,0 +1,17 @@
+.display-none {
+    display: none;
+}
+
+.background-color-green {
+    background-color: green;
+}
+
+.button {
+    margin-left: 2rem;
+    height: 2rem;
+    width: 5rem;
+}
+
+.text {
+    font-size: 1.2rem;
+}
