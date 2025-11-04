@@ -1,5 +1,3 @@
-
-
 let charactersData = {
   "characters": [
     {"id":1,"name":"Luke Skywalker","pic":"https://static.wikia.nocookie.net/starwars/images/2/20/LukeTLJ.jpg","homeworld":"tatooine"},
@@ -17,95 +15,88 @@ let charactersData = {
 
 const { characters } = charactersData;
 
-// === BUTONLAR & KONTEYNER ===
-const btnToggle = document.createElement("button");
-btnToggle.id = "toggleCharactersBtn";
-btnToggle.textContent = "Karakterleri Göster";
-document.body.appendChild(btnToggle);
+// === HOMEWORLDS ===
+let result = characters.map(c => c.homeworld ?? "other");
+let uniqueWorlds = [...new Set(result.map(w => w.toLowerCase()))];
+
+// === RADIO BUTTONLARI OLUŞTUR ===
+uniqueWorlds.forEach((world, i) => {
+  const id = `radio-${i}`;
+  const radio = document.createElement("input");
+  radio.type = "radio";
+  radio.id = id;
+  radio.name = "homeworld";
+  radio.value = world;
+
+  const label = document.createElement("label");
+  label.htmlFor = id;
+  label.innerText = world;
+
+  const br = document.createElement("br");
+  document.body.append(radio, label, br);
+});
+
+// === GÖSTER BUTONU ve KART KONTEYNERİ ===
+const btn = document.createElement("button");
+btn.textContent = "Karakterleri Göster";
+btn.style.marginTop = "10px";
+document.body.appendChild(btn);
 
 const row = document.createElement("div");
 row.id = "charactersRow";
+row.style.display = "flex";
+row.style.flexWrap = "wrap";
+row.style.gap = "10px";
+row.style.marginTop = "20px";
 document.body.appendChild(row);
 
-// === KART OLUŞTURUCU ===
+// === KART OLUŞTURMA FONKSİYONU ===
 function makeCard(c) {
-  const wrap = document.createElement("div");
-  wrap.className = "card";
+  const card = document.createElement("div");
+  card.style.width = "200px";
+  card.style.border = "1px solid #ddd";
+  card.style.borderRadius = "10px";
+  card.style.padding = "10px";
+  card.style.textAlign = "center";
+  card.style.background = "#f9f9f9";
 
   const img = document.createElement("img");
   img.src = c.pic;
   img.alt = c.name;
-  img.referrerPolicy = "no-referrer";
-  img.onerror = () => img.src = "https://via.placeholder.com/220x150?text=Yok";
+  img.style.width = "100%";
+  img.style.height = "250px";
+  img.style.objectFit = "cover";
+  img.onerror = () => (img.src = "https://via.placeholder.com/200x250?text=No+Image");
 
-  const body = document.createElement("div");
-  body.className = "card-body";
-
-  const title = document.createElement("h5");
-  title.className = "card-title";
+  const title = document.createElement("h4");
   title.textContent = c.name;
 
-  const p = document.createElement("p");
-  p.className = "card-text";
-  p.textContent = "Homeworld: " + (c.homeworld || "Bilinmiyor");
+  const hw = document.createElement("p");
+  hw.textContent = "Homeworld: " + (c.homeworld || "Bilinmiyor");
 
-  // 🔹 Resim butonu (yeni sekmede açar)
-  const btnOpen = document.createElement("button");
-  btnOpen.className = "btn btn-open-image";
-  btnOpen.type = "button";
-  btnOpen.textContent = "Resmi Aç";
-  btnOpen.setAttribute("data-src", c.pic);
-  btnOpen.title = "Görseli yeni sekmede aç";
-
-  // (Opsiyonel) Detay butonu (şu an örnek)
-  const btnDetail = document.createElement("a");
-  btnDetail.className = "btn";
-  btnDetail.href = "#";
-  btnDetail.textContent = "Detay";
-
-  const btnRow = document.createElement("div");
-  btnRow.className = "btn-row";
-  btnRow.append(btnOpen, btnDetail);
-
-  body.append(title, p, btnRow);
-  wrap.append(img, body);
-  return wrap;
+  card.append(img, title, hw);
+  return card;
 }
 
-// === GÖSTER / GİZLE ===
-let shown = false;
-btnToggle.addEventListener("click", () => {
-  if (!shown) {
-    row.replaceChildren(...characters.map(makeCard));
-    btnToggle.textContent = "Karakterleri Gizle";
-    shown = true;
+// === FILTER + RENDER ===
+btn.addEventListener("click", () => {
+  const checked = document.querySelector('input[name="homeworld"]:checked');
+  let filtered;
+
+  if (!checked) {
+    // Seçim yoksa TÜM KARAKTERLER
+    filtered = characters;
+    console.log("Tüm karakterler gösteriliyor.");
   } else {
-    row.replaceChildren();
-    btnToggle.textContent = "Karakterleri Göster";
-    shown = false;
+    const selectedWorld = checked.value;
+    console.log("Seçilen:", selectedWorld);
+
+    // Seçim varsa sadece o gezegen
+    filtered = characters.filter(c =>
+      (c.homeworld || "other").toLowerCase() === selectedWorld.toLowerCase()
+    );
   }
+
+  // Kartları render et
+  row.replaceChildren(...filtered.map(makeCard));
 });
-
-// === RESİM BUTONU: Event Delegation ===
-row.addEventListener("click", (e) => {
-  const btn = e.target.closest(".btn-open-image");
-  if (!btn) return;
-  const src = btn.getAttribute("data-src");
-  if (src) {
-    // Yeni sekmede güvenli aç
-    window.open(src, "_blank", "noopener,noreferrer");
-  }
-});
-
-let homeworldsRaw = (charactersArray, key) => {
-  let result = charactersArray.map((element) => element[key]);
-  return result;
-};
-
-let desiredKey = "homeworld";
-
-let result = homeworldsRaw(charactersData.characters, desiredKey);
-
-console.log(result);
-
-
