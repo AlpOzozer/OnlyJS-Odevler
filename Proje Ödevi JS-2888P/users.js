@@ -1,52 +1,51 @@
-const header1 = document.createElement("h3");
-header1.id = "header1";
-const header2 = document.createElement("h3");
-header2.id = "header2";
-const header3 = document.createElement("h3");
-header3.id = "header3";
-const header4 = document.createElement("h3");
-header4.id = "header4";
-const p1 = document.createElement("p");
-const p2 = document.createElement("p");
-const p3 = document.createElement("p");
-const p4 = document.createElement("p");
-const p5 = document.createElement("p");
-const p6 = document.createElement("p");
-const p7 = document.createElement("p");
-const p8 = document.createElement("p");
-const p9 = document.createElement("p");
-const p10 = document.createElement("p");
-const p11 = document.createElement("p");
-const p12 = document.createElement("p");
-const p13 = document.createElement("p");
+async function fetchUsers() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  return await res.json();
+}
 
-header1.innerHTML = "Temel Bilgiler";
-p1.innerHTML = "id";
-p2.innerHTML = "name";
-p3.innerHTML = "username";
+function createCard(user) {
+  const divMain = document.createElement("div");
+  divMain.className = "card"; 
 
-header2.innerHTML = "Adres Bilgileri";
-p4.innerHTML = "street";
-p5.innerHTML = "suite";
-p6.innerHTL = "city";
-p7.innerHTML = "zipcode";
-p8.innerHTML = "lat";
-p9.innerHTML = "lng";
+  const div1 = document.createElement("div");
+  const div2 = document.createElement("div");
+  const div3 = document.createElement("div");
+  const div4 = document.createElement("div");
+  const div5 = document.createElement("div");
 
-header3.innerHTML = "Şirket Bilgileri";
-p10.innerHTML = ""
-
-header4.innerHTML = "İletişim Bilgileri";
+  const p1 = document.createElement("p");
+  const p2 = document.createElement("p");
+  const p3 = document.createElement("p");
+  const p4 = document.createElement("p");
+  const p5 = document.createElement("p");
 
 
+  p1.innerHTML = `<span class="label">Name:</span> ${user.name}`;
+  p2.innerHTML = `<span class="label">İd:</span> ${user.id}`;
+  p3.innerHTML = `<span class="label">Email:</span> ${user.email}`;
+  p4.innerHTML = `<span class="label">Phone:</span> ${user.phone}`;
+  p5.innerHTML = `<span class="label">Website:</span> ${user.website}`;
 
-document.getElementById("div-1").appendChild(header1);
-document.getElementById("div-1").appendChild(header2);
-document.getElementById("div-1").appendChild(header3);
-document.getElementById("div-1").appendChild(header4);
-document.getElementById("header1").appendChild(p1);
-document.getElementById("header2").appendChild(p2);
-document.getElementById("header3").appendChild(p3);
-document.getElementById("header4").appendChild(p4);
+  div1.appendChild(p1);
+  div2.appendChild(p2);
+  div3.appendChild(p3);
+  div4.appendChild(p4);
+  div4.appendChild(p5);
 
-document.getElementById()
+  divMain.appendChild(div1);
+  divMain.appendChild(div2);
+  divMain.appendChild(div3);
+  divMain.appendChild(div4);
+  divMain.appendChild(div5);
+
+  return divMain;
+}
+
+fetchUsers().then(users => {
+  const container = document.getElementById("cards-container");
+
+  users.map(user => {
+    const card = createCard(user);
+    container.appendChild(card);
+  });
+});
