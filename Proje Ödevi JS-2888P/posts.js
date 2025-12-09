@@ -1,7 +1,24 @@
+const userInput = Number(prompt("Hangi kullanıcının paylaşımlarını görüntülemek isersiniz?"));
+
+
+if (userInput <= 1 || userInput >= 10 || isNaN(userInput)) {
+    alert("Girdiğiniz sayı yanlış");
+    throw new Error("Girdiğiniz sayı yanlış");
+    
+} else {
+    alert("Girdiğiniz sayı doğru");
+}
+
+const urlIds = new URLSearchParams(window.location.search);
+const userId = userInput;
+
 async function fetchUsers() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts?userId=" + userId)
+  
   return await res.json();
 }
+
+
 
 function createCard(user) {
   const divMain = document.createElement("div");
@@ -11,36 +28,27 @@ function createCard(user) {
   const div2 = document.createElement("div");
   const div3 = document.createElement("div");
   const div4 = document.createElement("div");
-  const div5 = document.createElement("div");
-  const div6 = document.createElement("div");
 
   const p1 = document.createElement("p");
   const p2 = document.createElement("p");
   const p3 = document.createElement("p");
   const p4 = document.createElement("p");
-  const p5 = document.createElement("p");
-  const p6 = document.createElement("p");
 
 
-  p1.innerHTML = `<span class="label">Name:</span> ${user.name}`;
+  p1.innerHTML = `<span class="label">User Id:</span> ${user.userId}`;
   p2.innerHTML = `<span class="label">Id:</span> ${user.id}`;
-  p3.innerHTML = `<span class="label">Email:</span> ${user.email}`;
-  p4.innerHTML = `<span class="label">Phone:</span> ${user.phone}`;
-  p5.innerHTML = `<span class="label">Website:</span> ${user.website}`;
+  p3.innerHTML = `<span class="label">Title:</span> ${user.title}`;
+  p4.innerHTML = `<span class="label">Post:</span> ${user.body}`;
 
   div1.appendChild(p1);
   div2.appendChild(p2);
   div3.appendChild(p3);
   div4.appendChild(p4);
-  div5.appendChild(p5);
-  div6.appendChild(p6);
 
   divMain.appendChild(div1);
   divMain.appendChild(div2);
   divMain.appendChild(div3);
   divMain.appendChild(div4);
-  divMain.appendChild(div5);
-  divMain.appendChild(div6);
 
   return divMain;
 }
@@ -53,5 +61,3 @@ fetchUsers().then(users => {
     container.appendChild(card);
   });
 });
-
-
