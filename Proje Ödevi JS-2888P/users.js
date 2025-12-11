@@ -19,7 +19,7 @@ function createCard(user) {
   const p3 = document.createElement("p");
   const p4 = document.createElement("p");
   const p5 = document.createElement("p");
-  const p6 = document.createElement("p");
+  const button1 = document.createElement("p");
 
 
   p1.innerHTML = `<span class="label">Name:</span> ${user.name}`;
@@ -27,13 +27,14 @@ function createCard(user) {
   p3.innerHTML = `<span class="label">Email:</span> ${user.email}`;
   p4.innerHTML = `<span class="label">Phone:</span> ${user.phone}`;
   p5.innerHTML = `<span class="label">Website:</span> ${user.website}`;
+  button1.innerHTML = `<span><a href="posts.html?userId=${user.id}" class="label">Gönderileri Görüntüle:</buttton></span> `;
 
   div1.appendChild(p1);
   div2.appendChild(p2);
   div3.appendChild(p3);
   div4.appendChild(p4);
   div5.appendChild(p5);
-  div6.appendChild(p6);
+  div6.appendChild(button1);
 
   divMain.appendChild(div1);
   divMain.appendChild(div2);
