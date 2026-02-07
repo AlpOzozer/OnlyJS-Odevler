@@ -1,0 +1,20 @@
+@use '../abstracts/variables' as v;
+
+#partners {
+    justify-content: center;
+    text-align: center;
+}
+
+#partners-p {
+    color: v.$p-color;
+}
+
+.partners-img {
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    .partners-div {
+        display: flex;
+    }
+}

@@ -1,0 +1,64 @@
+@use '../abstracts/variables' as v;
+
+
+#sign-up-fund {
+    padding-left: 12rem;
+    margin-bottom: 4rem;
+}
+
+#sign-up-fund-h3 {
+    text-align: center;
+    padding-bottom: 2.5rem;
+}
+
+.sign-up-fund-p {
+    color: v.$p-color;
+}
+
+.arrow-div {
+    position: relative;
+}
+
+.ellipse {
+    height: 12px;
+    width: 12px;
+    border: 2px solid #1dbbeb;
+    border-radius: 50%;
+    z-index: -1;
+    position: absolute;
+    top: 107px;
+}
+
+.sign-up-fund-hr {
+    z-index: 1;
+    border: 2px dashed #1dbbeb;
+    position: absolute;
+    width: 100%;
+    top: 6rem;
+}
+
+.arrow-right {
+    z-index: -1;
+    width: 10px;
+    height: 10px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #1dbbeb;
+    position: absolute;
+    top: 103px;
+    left: 305px;
+}
+
+
+@media (max-width: 992px) {
+    .arrow-div, .ellipse, .sign-up-fund-hr, .arrow-right {
+        display: none;
+    }
+
+    #sign-up-fund {
+        display: block;
+        flex-direction: column;
+        padding-right: 8rem;
+        text-align: center;
+    }
+}

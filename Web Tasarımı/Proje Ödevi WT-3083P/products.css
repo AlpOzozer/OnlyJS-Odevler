@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+#nav {
+    background-color: green;
+}
+
+#header {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+#header-p-1 {
+    color: #868392;
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+
+
+#section-3 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.img-our-team {
+    margin-bottom: 2rem;
+    
+}
+
+.footer-item {
+    color: white;
+}
+
+#footer-div-1 {
+    background-color: lightgreen;
+    color: white;
+    padding: 1.5rem;
+}
+

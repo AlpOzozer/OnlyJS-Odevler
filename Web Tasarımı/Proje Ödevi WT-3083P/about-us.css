@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+#nav {
+    background-color: green;
+} 
+
+.section-p {
+    color: #6c6f76;
+}
+
+#footer-div-1 {
+    background-color: lightgreen;
+    color: white;
+    padding: 1.5rem;
+}
+
+.footer-item {
+    color: white;
+}
+
+#section {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+

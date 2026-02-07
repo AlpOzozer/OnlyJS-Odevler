@@ -1,0 +1,83 @@
+@use '../abstracts/variables' as v;
+
+#buy {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    display: flex;
+}
+
+.buy-container {
+    display: flex;
+    margin-bottom: 1.3rem;
+}
+
+.buy-border-1 {
+    display: flex;
+    align-items: center;
+    width: 13rem;
+    margin-right: 1.3rem;
+    border: 2px solid transparent; 
+    border-radius: 13px;
+     background-image: linear-gradient(white, white), 
+                    linear-gradient(to right, #6da1cc, #c8f1ff);
+     background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.buy-border-2 {
+    display: flex;
+    align-items: center;
+    width: 130px;
+    padding-left: 1.3rem;
+    border: 2px solid transparent; 
+    border-radius: 13px;
+     background-image: linear-gradient(white, white), 
+                    linear-gradient(to right, #6da1cc, #c8f1ff);
+     background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.form-buy {
+    display: flex;
+}
+
+.buy-select {
+    border: transparent;
+}
+
+.buy-p {
+    padding-top: 11px;
+}
+
+.buy-input {
+    border: none;
+    color: black;
+    padding-left: 1.5rem;
+}
+
+::placeholder {
+    color: black;
+}
+
+.buy-label {
+    color: #3181f5;
+    padding-left: 1rem;
+}
+
+#buy-cripto-img {
+    margin-right: 13rem;
+}
+
+#buy-p-2 {
+    color: v.$p-color;
+}
+
+@media (max-width: 992px) {
+    #box-1 {
+        order: 2
+    }
+
+    #box-2 {
+        order: 1;
+    }
+}

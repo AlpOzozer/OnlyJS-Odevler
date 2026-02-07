@@ -1,0 +1,22 @@
+@use '../abstracts/variables' as v;
+
+#credit-card {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    align-items: center;
+}
+
+#credit-card-nefa {
+    color: #1dbbeb;
+    font-weight: 645;
+}
+
+#credit-card-p {
+    color: v.$p-color;
+}
+
+#credit-card-text-div {
+    padding-left: 5rem;
+}
+
+

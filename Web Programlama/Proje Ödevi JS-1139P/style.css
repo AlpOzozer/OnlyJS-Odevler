@@ -1,0 +1,45 @@
+html {
+    font-family: Verdana, sans-serif;
+}
+
+body {
+    background-image: url("img/soccer-field.jpg");
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#takim-a {
+    display: flex;
+    justify-content: center;
+    padding-top: 20rem;
+    margin-bottom: 4rem;  
+}
+
+#takim-b {
+    display: flex;
+    justify-content: center;
+}
+
+.gol {
+    color: turquoise;
+}
+
+#team-name-1 {
+    color: red;
+}
+
+#team-name-2 {
+    color: red;
+}
+
+.button {
+    height: 2rem;
+    border-radius: 0.5rem;
+    color: green;
+    background-color: lightgreen;
+    border-color: green;
+}
+
+

@@ -1,0 +1,63 @@
+@use '../abstracts/variables' as v;
+
+#advanced-trading-tools-main-div-1 {
+    padding: 3rem;
+    padding-left: 10rem;
+}
+
+#advanced-trading-tools-main-div-2 {
+    position: relative;
+    bottom: 100px;
+}
+
+#trading-tools-h3 {
+    color: #1dbbeb;
+}
+
+.trading-tools-p-1 {
+    font-weight: 500;
+}
+
+.trading-tools-p-2 {
+    color: v.$p-color;
+}
+
+#trading-tools-learn-more {
+    color: v.$button-color;
+    text-decoration: underline;
+    font-weight: 500;
+    padding-right: 7rem;
+}
+
+#trading-tools-div-3 {
+    align-items: center;
+    padding-top: 1.2rem;
+}
+
+@media (max-width: 992px) {
+    #advanced-trading-tools-main-div-1 {
+        order: 2;
+    }
+
+    #advanced-trading-tools-main-div-2 {
+        order: 1;
+    }
+
+    #trading-tools-button {
+        width: 20rem;
+    }
+
+    #trading-tools-learn-more-div {
+        padding-left: 7.5rem;
+        padding-top: 1.3rem;
+    }
+
+    
+}
+
+@media (min-width: 992px) {
+    #trading-tools-div-3 {
+        display: flex;
+    }
+}
+
