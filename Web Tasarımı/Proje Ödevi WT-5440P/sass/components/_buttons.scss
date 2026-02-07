@@ -1,0 +1,93 @@
+@use '../abstracts/variables' as v;
+
+#login-button {
+    margin-left: 2rem;
+    color: v.$button-color;
+    background-color: white;
+    border-radius: v.$button-border-radius;
+    height: 2.5rem;
+    width: 6rem;
+    border-width: 1px;
+    border-color: v.$button-color;
+}
+
+#signup-button {
+    margin-left: 1.5rem;
+    color: white;
+    background-color: v.$button-color;
+    border-radius: v.$button-border-radius;
+    height: v.$button-height;
+    width: v.$button-width;
+    border-color: v.$button-color;
+}
+
+#get-started-button {
+    color: white;
+    background-color: v.$button-color;
+    border-color: v.$button-color;
+    border-radius: v.$button-border-radius;
+    height: v.$button-height;
+    width: v.$button-width;
+}
+
+#download-app-button {
+    color: v.$button-color;
+    background-color: white;
+    border-color: v.$button-color;
+    border-radius: v.$button-border-radius;
+    height: 2.5rem;
+    width: 9rem;
+}
+
+#buy-now {
+    color: white;
+    background-color: v.$button-color;
+    border-color: v.$button-color;
+    border-radius: v.$button-border-radius;
+    height: 2.5rem;
+    width: 22rem;
+}
+
+#credit-card-button {
+    color: v.$button-color;
+    background-color: white;
+    border-color: v.$button-color;
+    border-radius: v.$button-border-radius;
+    font-weight: 500;
+    height: 3rem;
+    width: 10.5rem;
+
+}
+
+#trading-tools-button {
+    color: v.$button-color;
+    background-color: white;
+    border-color: v.$button-color;
+    border-radius: v.$button-border-radius;
+    font-weight: 500;
+    height: 3rem;
+    width: 10.5rem;
+}
+
+#back-to-top-button {
+    border-color: rgb(219, 219, 219);
+    color: rgb(96, 96, 96);
+    border-radius: 6px;
+    height: 2.2rem;
+    width: 8.2rem;
+    margin-top: 6rem;
+    margin-left: 3rem;
+}
+
+#footer-button {
+    color: white;
+    background-color: v.$button-color;
+    border-color: v.$button-color;
+    border-radius: 6px;
+}
+
+@media (max-width: 992px) {
+    #trading-tools-button {
+        width: 20rem;
+    }
+}
