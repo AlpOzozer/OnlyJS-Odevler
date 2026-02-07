@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futbol Oyunu</title>
+    <link rel="shortcut icon" href="img/soccer-ball.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="takim-a">
+        <div>
+            <h1><span id="team-name-1">Takım A</span> &nbsp;&nbsp; <button class="button" onclick="changeTeamName1()">Takım Adını Değiştir</button></h1>
+            <button class="button" onclick="increaseGoal1()">Gol Arttır</button>
+            <button class="button" onclick="decreaseGoal1()">Gol Azalt</button>
+            <button class="button" onclick="determineGoal1()">Gol Sayısını Belirle</button>
+        </div>
+       <div>
+            <h1 class="gol"> &nbsp;&nbsp; <span id="goal-number-1">0</span> Gol</h1>
+       </div>
+    </div>
+    <div id="takim-b">
+        <div>
+            <h1><span id="team-name-2">Takım B</span> &nbsp;&nbsp; <button class="button" onclick="changeTeamName2()">Takım Adını Değiştir</button></h1>
+            <button class="button" onclick="increaseGoal2()">Gol Arttır</button>
+            <button class="button" onclick="decreaseGoal2()">Gol Azalt</button>
+            <button class="button" onclick="determineGoal2()">Gol Sayısını Belirle</button>
+        </div>
+        <div>
+            <h1 class="gol"> &nbsp;&nbsp; <span id="goal-number-2">0</span> Gol</h1>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+@use '../abstracts/variables' as v;
+
+#questions {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+#questions-support {
+    color: v.$button-color;
+    font-weight: 500;
+}
+
+#frequently-asked-questions {
+    font-weight: 700;
+}
+
+.accordion {
+  background-color: white;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: white;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.fa-chevron-down {
+    margin-left: 17rem;
+}
+
+#fa-chevron-down-2 {
+    margin-left: 20rem;
+}
+
+#fa-chevron-down-3 {
+    margin-left: 15rem;
+}
+
+.questions-text {
+  color: v.$p-color;
+}
+
+@media (max-width: 992px) {
+  #questions {
+    display: flex;
+    padding-left: 6rem;
+    text-align: center;
+  }
+}
