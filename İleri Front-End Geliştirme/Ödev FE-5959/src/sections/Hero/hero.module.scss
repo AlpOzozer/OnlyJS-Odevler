@@ -1,0 +1,10 @@
+@use "../../../src/sass/variables.scss" as v;
+
+.hero {
+    background-color: v.$hero-bg-color;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    margin-top: 6rem;
+    padding-top: 5rem;
+    padding-bottom: 6rem;
+}

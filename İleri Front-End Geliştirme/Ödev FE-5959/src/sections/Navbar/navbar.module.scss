@@ -1,6 +1,5 @@
+@use "../../sass/variables.scss" as v;
+
 .navbar {
-    background-color: black;
+    background-color: v.$nav-bg-color;
 }
-
-
-

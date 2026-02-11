@@ -1,4 +1,8 @@
+@use "./variables.scss";
 @use "../sections/Navbar/navbar.module.scss";
 @use "../components/NavbarText1/navbartext1.module.scss";
 @use "../components/NavbarText2/navbartext2.module.scss";
-@use "./variables.scss";
+@use "../components/HeroText/herotext.module.scss";
+@use "../components/HeroButton/herobutton.module.scss";
+@use "../sections/Hero/hero.module.scss";
+@use "../components/Card/card.module.scss";
