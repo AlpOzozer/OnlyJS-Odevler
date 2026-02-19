@@ -1,0 +1,9 @@
+@use "../../sass/variables.scss" as v;
+
+.footer {
+    background-color: v.$nav-bg-color;
+    color: white;
+    padding-top: 2.9rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}

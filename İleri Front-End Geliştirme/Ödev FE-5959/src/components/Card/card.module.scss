@@ -1,0 +1,19 @@
+@use "../../sass/variables.scss" as v;
+
+#card-div {
+    text-align: center;
+    background-color: v.$hero-bg-color;
+    margin: 2rem;
+    padding-bottom: 1rem;
+}
+
+.card-p {
+    white-space: pre-line;
+}
+
+.card-h5 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
