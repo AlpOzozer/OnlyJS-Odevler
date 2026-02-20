@@ -3,39 +3,36 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 
 function Features() {
     const card1 = {
-        iconClassName: "bi bi-collection",
-        cardHeader: "Fresh new layout",
-        cardParagraph: "With Bootstrap 5, we've created a fresh\n new layout for this template!"
+        iconClassName: "bi bi-pc-display",
+        cardHeader: "Kolay kullanılabilir",
+        cardParagraph: "Kodlar parça yani component halinde oluşturulduğu için aynı parçalar birçok yerde kullanılabilir."
     }
 
     const card2 = {
         iconClassName: "bi bi-cloud-download",
-        cardHeader: "Free to download",
-        cardParagraph: "As always, Start Bootstrap has a\n powerful collectin of free templates.",
+        cardHeader: "Açık kaynaklıdır",
+        cardParagraph: "Herkes kullanabilir",
     }
 
     const card3 = {
         iconClassName: "bi bi-card-heading",
-        cardHeader: "Jumbotron hero header",
-        cardParagraph: "The heroic part of this template is the\n jumbotron hero header!",
+        cardHeader: "Mobil ve bilgisayar için geliştirilebilir.",
     }
 
     const card4 = {
         iconClassName: "bi bi-bootstrap",
-        cardHeader: "Feature boxes",
-        cardParagraph: "We've created some custom feature\n boxes using Bootstrap icons!",
+        cardHeader: "Öğrenilmesi kolaydır",
     }
 
     const card5 = {
         iconClassName: "bi bi-code",
-        cardHeader: "Simple clean code",
-        cardParagraph: "We keep our dependencies up to date\n and squash bugs as they come!",
+        cardHeader: "React, .jsx uzantılıdır",
+        cardParagraph: "jsx Javascript ve XML'in kısaltmasıdır",
     }
 
     const card6 = {
         iconClassName: "bi bi-patch-check",
-        cardHeader: "A name you trust",
-        cardParagraph: "Start Bootstrap has been the leader in\n free Bootstrap templates since 2013!",
+        cardHeader: "Büyük bir topluluğu vardır",
     }
     
 
