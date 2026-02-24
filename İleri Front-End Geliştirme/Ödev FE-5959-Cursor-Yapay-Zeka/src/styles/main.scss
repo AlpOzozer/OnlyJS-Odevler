@@ -1,0 +1,15 @@
+// Small custom tweaks to match the Heroic Features look
+
+.feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+}
+
+// Utility-like negative margin used in Start Bootstrap template examples
+.mt-n4 {
+  margin-top: -1.5rem !important;
+}
+
