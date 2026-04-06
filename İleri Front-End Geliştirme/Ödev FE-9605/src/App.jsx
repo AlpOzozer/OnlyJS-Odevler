@@ -6,10 +6,14 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import ListItems from './ListItems';
 
 
 function App() {
   const [todoInput, setTodoInput] = useState("");
+  const [todos, setToDos] = useState([]);
+  console.log(todoInput);
+
 
   return (
     <Container>
@@ -17,8 +21,14 @@ function App() {
         <Col>
           <form>
             <label>Hedef</label>
-              <input type="text" value={todoInput} onChange="setTodoInput()" />
-              <Button variant="success">Ekle</Button>
+              <input
+            type="text"
+            value={todoInput}
+            onChange={(e) => setTodoInput(e.target.value)}
+          />
+          <Button variant="success" onClick={addInput}>
+            Ekle
+          </Button>
           </form>
         </Col>
       </Row>
