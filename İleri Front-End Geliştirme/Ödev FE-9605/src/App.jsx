@@ -6,6 +6,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ListItems from './ListItems';
 import "../src/ListItems.css";
+import "../src/App.css";
 
 function App() {
   const [todoInput, setTodoInput] = useState("");
@@ -28,21 +29,20 @@ function App() {
   return (
     <Container>
       <Row>
-        <Col>
-          <form onSubmit={handleAddTodo}>
-            <label>Hedef</label>
+        <Col className="col-12">
+          <form className="form" onSubmit={handleAddTodo}>
+            <label className="label">Hedef</label>
             <input
               type="text"
               value={todoInput}
               onChange={(e) => setTodoInput(e.target.value)}
             />
-            <Button variant="success" type="submit">
+            <Button className="button" variant="success" type="submit">
               Ekle
             </Button>
           </form>
         </Col>
-
-        <Col>
+        <Col className="col-12">
           <ListItems list={todos} deleteByIndex={deleteByIndex} />
         </Col>
       </Row>
