@@ -6,20 +6,24 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import App from './App';
 
 
-function ListItems(list) {
-    return (
-        <ul>{
-             list.map((item, index) => (
-                    <div key={index}>
-                        {item}
-                    </div>
-                ))
-            }
-           
-        </ul>
-    )
+
+function ListItems({ list, deleteByIndex }) {
+  return (
+    <ul>
+      {list.map((item, index) => (
+        <li
+          key={index}
+          onClick={() => deleteByIndex(index)}
+          style={{ cursor: "pointer" }}
+        >
+          {item}
+        </li>
+      ))}
+    </ul>
+  );
 }
 
 export default ListItems;
