@@ -1,13 +1,16 @@
-function ProductNameInput() {
+function ProductNameInput({
+    input,
+    setInput
+}) {
+
     return (
-        <>
-            <form>
-                <label>
-                    <input type="text" />
-                </label>
-            </form>
-        </>
-    )
+        <input
+            type="text"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            placeholder="Ürün gir..."
+        />
+    );
 }
 
 export default ProductNameInput;

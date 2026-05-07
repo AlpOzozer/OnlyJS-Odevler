@@ -1,34 +1,44 @@
 const categories = [
     {
-        "id": 1,
-        "name": "Mobilya",
+        id: 1,
+        name: "Mobilya"
     },
     {
-        "id": 2,
-        "name": "Yemek"
+        id: 2,
+        name: "Yemek"
     },
     {
-        "id": 3,
-        "name": "İçecek"
-    },
-]
+        id: 3,
+        name: "İçecek"
+    }
+];
 
-function CategorySelect() {
+function CategorySelect({
+    selectedCategory,
+    setSelectedCategory
+}) {
 
-    
     return (
-        <>
-            <form>
-                <select>
-                    {categories.map(category =>
-                    <option key={category.id} value={category.id}>
-                        {category.name}
-                    </option>
-                    )}
-                </select>
-            </form>
-        </>
-    )
+        <select
+            value={selectedCategory}
+            onChange={(e) =>
+                setSelectedCategory(e.target.value)
+            }
+        >
+
+            {categories.map(category => (
+
+                <option
+                    key={category.id}
+                    value={category.name}
+                >
+                    {category.name}
+                </option>
+
+            ))}
+
+        </select>
+    );
 }
 
 export default CategorySelect;
