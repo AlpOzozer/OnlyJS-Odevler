@@ -8,6 +8,10 @@ import ProductNameInput from './ProductNameInput/ProductNameInput';
 import CategorySelect from './CategorySelect/CategorySelect';
 import ShopSelect from './ShopSelect/ShopSelect';
 import Button from './Button/Button';
+import Table from 'react-bootstrap/Table';
+import "../src/style.css";
+import Table1 from './Table/Table1';
+
 
 function App() {
 
@@ -37,7 +41,7 @@ function App() {
 
     return (
         <>
-            <Container>
+            <Container className="container">
                 <Row>
                     <Col md={12}>
                         <ProductNameInput
@@ -46,7 +50,13 @@ function App() {
                         />
                     </Col>
                     <Col md={12}>
+                        <label className="label">Kategori Seç</label>
+                    </Col>
+                    <Col md={12}>
                         <CategorySelect selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
+                    </Col>
+                    <Col md={12}>
+                        <label className="label">Market Seç</label>
                     </Col>
                     <Col md={12}>
                         <ShopSelect selectedShop={selectedShop} setSelectedShop={setSelectedShop} />
@@ -58,13 +68,7 @@ function App() {
                         />
                     </Col>
                     <Col md={12}>
-                        <ul>
-                            {products.map(product => (
-                                <li key={product.id}>
-                                    {product.name}
-                                </li>
-                            ))}
-                        </ul>
+                        <Table1 products={products}/>
                     </Col>
                 </Row>
             </Container>

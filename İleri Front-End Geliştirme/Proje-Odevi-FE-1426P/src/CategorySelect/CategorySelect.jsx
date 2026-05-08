@@ -20,14 +20,13 @@ function CategorySelect({
 
     return (
         <select
+            className="select"
             value={selectedCategory}
             onChange={(e) =>
                 setSelectedCategory(e.target.value)
             }
         >
-
             {categories.map(category => (
-
                 <option
                     key={category.id}
                     value={category.name}
@@ -36,7 +35,6 @@ function CategorySelect({
                 </option>
 
             ))}
-
         </select>
     );
 }

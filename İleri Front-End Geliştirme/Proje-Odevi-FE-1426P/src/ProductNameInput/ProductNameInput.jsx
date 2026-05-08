@@ -5,10 +5,11 @@ function ProductNameInput({
 
     return (
         <input
+            className="productNameInput"
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="Ürün gir..."
+            placeholder="Ürün Adı"
         />
     );
 }

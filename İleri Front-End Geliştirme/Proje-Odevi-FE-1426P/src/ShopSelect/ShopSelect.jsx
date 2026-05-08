@@ -19,22 +19,21 @@ function ShopSelect({
 }) {
 
     return (
+        
         <select
+            className="select"
             value={selectedShop}
             onChange={(e) =>
                 setSelectedShop(e.target.value)
             }
         >
-
             {shops.map(shop => (
-
                 <option
                     key={shop.id}
                     value={shop.name}
                 >
                     {shop.name}
                 </option>
-
             ))}
         </select>
     );
