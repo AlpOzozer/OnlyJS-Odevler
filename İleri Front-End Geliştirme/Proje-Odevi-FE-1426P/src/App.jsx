@@ -23,6 +23,7 @@ function App() {
 
     const [selectedShop, setSelectedShop] = useState("Migros");
 
+    console.log(products);
     const handleAddProduct = () => {
 
         if (!input.trim()) return;
@@ -31,7 +32,8 @@ function App() {
             id: nanoid(),
             name: input,
             category: selectedCategory,
-            shop: selectedShop
+            shop: selectedShop,
+            isBought: false
         };
 
         setProducts(prev => [...prev, newProduct]);
