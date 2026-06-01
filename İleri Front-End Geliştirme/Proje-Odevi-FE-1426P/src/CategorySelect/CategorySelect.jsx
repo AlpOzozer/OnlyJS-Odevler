@@ -1,3 +1,6 @@
+import "../CategorySelect/category-select.css";
+import Form from "react-bootstrap/Form";
+
 const categories = [
     {
         id: 1,
@@ -14,29 +17,24 @@ const categories = [
 ];
 
 function CategorySelect({
-    selectedCategory,
-    setSelectedCategory
+  categories,
+  selectedCategory,
+  setSelectedCategory,
 }) {
-
-    return (
-        <select
-            className="select"
-            value={selectedCategory}
-            onChange={(e) =>
-                setSelectedCategory(e.target.value)
-            }
-        >
-            {categories.map(category => (
-                <option
-                    key={category.id}
-                    value={category.name}
-                >
-                    {category.name}
-                </option>
-
-            ))}
-        </select>
-    );
+  return (
+    <Form.Select
+      value={selectedCategory}
+      onChange={(e) =>
+        setSelectedCategory(e.target.value)
+      }
+    >
+      {categories.map((category) => (
+        <option key={category} value={category}>
+          {category}
+        </option>
+      ))}
+    </Form.Select>
+  );
 }
 
 export default CategorySelect;

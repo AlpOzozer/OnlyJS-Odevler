@@ -1,12 +1,14 @@
-.productNameInput {
+.form-control.productNameInput {
     font-size: 1.5rem;
-    margin-top: 2.5rem;
-    border-width: 3px;
     border-radius: 6px;
     border: 3px solid green;
+    padding: 0.5rem 1rem;
+    width: 250px;
+    display: block;
 }
 
-input[type="text"]::placeholder {
+.form-control.productNameInput::placeholder {
     text-align: center;
     color: darkgreen;
 }
+

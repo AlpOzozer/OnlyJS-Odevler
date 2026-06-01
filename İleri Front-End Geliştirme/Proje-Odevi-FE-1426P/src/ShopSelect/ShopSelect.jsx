@@ -1,3 +1,5 @@
+import Form from "react-bootstrap/Form";
+
 const shops = [
     {
         id: 1,
@@ -13,30 +15,24 @@ const shops = [
     }
 ];
 
-function ShopSelect({
-    selectedShop,
-    setSelectedShop
-}) {
 
-    return (
-        
-        <select
-            className="select"
-            value={selectedShop}
-            onChange={(e) =>
-                setSelectedShop(e.target.value)
-            }
-        >
-            {shops.map(shop => (
-                <option
-                    key={shop.id}
-                    value={shop.name}
-                >
-                    {shop.name}
-                </option>
-            ))}
-        </select>
-    );
+function ShopSelect({
+  shops,
+  selectedShop,
+  setSelectedShop,
+}) {
+  return (
+    <Form.Select
+      value={selectedShop}
+      onChange={(e) => setSelectedShop(e.target.value)}
+    >
+      {shops.map((shop) => (
+        <option key={shop} value={shop}>
+          {shop}
+        </option>
+      ))}
+    </Form.Select>
+  );
 }
 
 export default ShopSelect;
