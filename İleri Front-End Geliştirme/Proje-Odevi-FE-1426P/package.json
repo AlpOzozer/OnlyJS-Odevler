@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.8",
+    "fuse.js": "^7.4.2",
+    "js-confetti": "^0.13.1",
     "react": "^19.2.0",
     "react-bootstrap": "^2.10.10",
     "react-dom": "^19.2.0"
