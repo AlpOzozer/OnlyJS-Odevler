@@ -1,0 +1,20 @@
+{
+  "name": "odev-typescript-alistirmalari",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev:fonksiyonlar": "tsx watch ./src/fonksiyonlar.ts",
+    "dev:arrayler": "tsx watch ./src/arrayler.ts",
+    "dev:objeler": "tsx watch ./src/objeler.ts",
+    "dev:unionlar": "tsx watch ./src/unionlar.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tsx": "^4.0.0",
+    "typescript": "^7.0.2"
+  }
+}
