@@ -17,10 +17,10 @@ function kardesPayi(name) {
         return `bir tane ${name} için, bir de benim için`;
     }
     else {
-        return "Bir tane senin için, bir de benim için";
+        return "Bir tane senin için, bir de benim için.";
     }
 }
-kardesPayi("Alp");
+console.log(kardesPayi("Mehmet"));
 // **********************************************
 // ******************* BÖLÜM 2 ******************
 // **********************************************
@@ -44,4 +44,13 @@ kardesPayi("Alp");
 // artikYil(1600) --> true
 // İPUCU: mod alma işlemi için % operatörünü kullanabiliriz.
 // Kodu buraya yazalım...
+function artikYil(year) {
+    if (year % 4 === 0 && year % 100 !== 0 || year % 400 === 0) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+console.log(artikYil(2023));
 //# sourceMappingURL=fonksiyonlar.js.map
