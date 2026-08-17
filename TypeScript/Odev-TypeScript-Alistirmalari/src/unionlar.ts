@@ -7,7 +7,7 @@
 
 // Kodu buraya yazalım...
 
-
+let highScore: number | boolean = 22;
 
 
 // **********************************************
@@ -20,7 +20,9 @@
 
 // Kodu buraya yazalım...
 
+let stuff: string[] | number[] = [2];
 
+console.log(stuff);
 
 
 // **********************************************
@@ -32,7 +34,7 @@
 
 // Kodu buraya yazalım...
 
-
+type SkillLevel = "Beginner" | "Intermediate" | "Advanced" | "Expert";
 
 
 // **********************************************
@@ -47,6 +49,13 @@
 
 
 // Kodu buraya yazalım...
+
+interface SkiSchoolStudent {
+    name: string;
+    age: number;
+    sport: "ski" | "snowboard";
+    level: SkillLevel;
+}
 
 
 
@@ -63,7 +72,11 @@
 
 // Kodu buraya yazalım...
 
-
+type RGB = {
+    r: number,
+    g: number,
+    b: number
+}
 
 // HSL renklerini temsil eden bir tür oluşturalım. Bu tür, aşağıdaki özelliklere sahip
 // olsun:
@@ -74,7 +87,11 @@
 
 // Kodu buraya yazalım...
 
-
+type HSL = {
+    h: number,
+    s: number;
+    l: number
+}
 
 // "colors" isminde boş bir array oluşturalım. Bu array, yukarıda oluşturduğumuz iki 
 // türden oluşabilsin. Yani bu array'in içinde hem RGB renkler, hem de HSL renkler 
@@ -82,6 +99,13 @@
 
 
 // Kodu buraya yazalım...
+
+let colors: (RGB | HSL)[] = [] = [
+    {r: 255, g: 0, b: 0},
+    {h: 0, s: 100, l:50}
+];
+
+console.log(colors);
 
 
 
@@ -100,3 +124,15 @@
 
 
 // Kodu buraya yazalım...
+
+function greet(selam: string | string[]) {
+    if (typeof selam === "string") {
+        console.log(`Merhaba ${selam}`);
+    } else {
+        console.log(`Merhaba, ${selam}`);
+    }
+}
+
+console.log(greet("Alp"));
+
+console.log(greet(["a", "b", "c"]));
